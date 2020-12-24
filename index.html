@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Merry Christmas</title>
+  <style>
+    main {
+      width: 100%;
+      margin-top: 2rem;
+    }
+
+    main > div {
+      min-width: 600px;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+      animation-name: jumping;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    @keyframes jumping {
+      0% {
+        padding-top: 0px;
+        transform: rotate(0deg);
+      }
+      25% {
+        padding-top: 25px;
+        transform: rotate(7deg);
+      }
+      50% {
+        padding-top: 50px;
+        transform: rotate(0deg);
+      }
+      50% {
+        padding-top: 25px;
+        transform: rotate(-7deg);
+      }
+      100% {
+        padding-top: 0px;
+        transform: rotate(0deg);
+      }
+    }
+  </style>
+</head>
+<body onfocus="playScript()" onclick="playScript()">
+  <main>
+    <div>
+      <img src="Tarjeta2020.jpg" alt="tarjeta de navidad 2020">
+      <audio controls autoplay>
+        <source src="we-wish-you.mp4" type="audio/mpeg">
+      </audio>
+    </div>
+  </main>
+  <script>
+    function playScript() {
+      document.querySelector('audio').play()
+      console.log("play")
+    }
+  </script>
+</body>
+</html>
